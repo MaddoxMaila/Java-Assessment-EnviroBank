@@ -6,9 +6,12 @@
       <change beforePath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/CurrentAccount.java" afterPath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/CurrentAccount.java" />
       <change beforePath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/Main.java" afterPath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SavingsAccount.java" afterPath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SavingsAccount.java" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SystemDB.java" afterPath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SystemDB.java" />
       <change beforePath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/UserAccountNotFound.java" afterPath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/UserAccountNotFound.java" />
       <change beforePath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/WithdrawAmountExceedingAccount.java" afterPath="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/WithdrawAmountExceedingAccount.java" />
+=======
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +26,13 @@
       <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/AccountService.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="532">
               <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+=======
+            <state relative-caret-position="380">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
               <folding />
             </state>
           </provider>
@@ -33,20 +41,44 @@
       <file leaf-file-name="CurrentAccount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/CurrentAccount.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="185">
               <caret line="110" column="44" lean-forward="false" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+=======
+            <state relative-caret-position="247">
+              <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-                <element signature="e#1126#1127#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-                <element signature="e#1273#1274#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
-                <element signature="e#1405#1406#0" expanded="true" />
-                <element signature="e#1502#1503#0" expanded="true" />
-                <element signature="e#1532#1533#0" expanded="true" />
-                <element signature="e#1650#1651#0" expanded="true" />
-                <element signature="e#1682#1683#0" expanded="true" />
+                <element signature="e#1176#1177#0" expanded="true" />
+                <element signature="e#1201#1202#0" expanded="true" />
+                <element signature="e#1337#1338#0" expanded="true" />
+                <element signature="e#1375#1376#0" expanded="true" />
+                <element signature="e#1536#1537#0" expanded="true" />
+                <element signature="e#1569#1570#0" expanded="true" />
+                <element signature="e#1706#1707#0" expanded="true" />
+                <element signature="e#1736#1737#0" expanded="true" />
+                <element signature="e#1854#1855#0" expanded="true" />
+                <element signature="e#1886#1887#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="UserAccountNotFound.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/UserAccountNotFound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,8 +87,19 @@
       <file leaf-file-name="UserAccountNotFound.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/UserAccountNotFound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="61" lean-forward="true" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WithdrawAmountExceedingAccount.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/WithdrawAmountExceedingAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="61" lean-forward="true" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
               <folding />
             </state>
           </provider>
@@ -65,23 +108,25 @@
       <file leaf-file-name="SystemDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SystemDB.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="242">
               <caret line="103" column="53" lean-forward="false" selection-start-line="103" selection-start-column="53" selection-end-line="103" selection-end-column="53" />
+=======
+            <state relative-caret-position="340">
+              <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1842#1843#0" expanded="true" />
-                <element signature="e#2026#2027#0" expanded="true" />
-                <element signature="e#2069#2070#0" expanded="true" />
-                <element signature="e#2227#2228#0" expanded="true" />
-                <element signature="e#2281#2282#0" expanded="true" />
-                <element signature="e#2439#2440#0" expanded="true" />
-                <element signature="e#2493#2494#0" expanded="true" />
+                <element signature="e#1744#1745#0" expanded="true" />
+                <element signature="e#1776#1777#0" expanded="true" />
+                <element signature="e#1949#1950#0" expanded="true" />
+                <element signature="e#1992#1993#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -122,6 +167,23 @@
               <folding>
                 <element signature="e#187#188#0" expanded="true" />
                 <element signature="e#249#250#0" expanded="true" />
+=======
+      <file leaf-file-name="SavingsAccount.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SavingsAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1205">
+              <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#960#961#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1052#1053#0" expanded="true" />
+                <element signature="e#1085#1086#0" expanded="true" />
+                <element signature="e#1137#1138#0" expanded="true" />
+                <element signature="e#1167#1168#0" expanded="true" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
               </folding>
             </state>
           </provider>
@@ -153,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/AccNotFound.java" />
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/WithdrawAmountExceedingAccount.java" />
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/UserAccountNotFound.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/AccountService.java" />
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SystemDB.java" />
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/WithdrawAmountExceedingAccount.java" />
@@ -160,6 +223,15 @@
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/CurrentAccount.java" />
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SavingsAccount.java" />
         <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/Main.java" />
+=======
+        <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/WithdrawAmountExceedingAccount.java" />
+        <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/exceptions/UserAccountNotFound.java" />
+        <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SystemDB.java" />
+        <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/AccountService.java" />
+        <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/CurrentAccount.java" />
+        <option value="$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SavingsAccount.java" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
       </list>
     </option>
   </component>
@@ -356,7 +428,11 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.50292826" order="1" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09350238" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -364,8 +440,12 @@
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.49707174" order="5" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -377,7 +457,12 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -461,6 +546,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SavingsAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -476,11 +562,33 @@
             <element signature="e#1322#1323#0" expanded="true" />
             <element signature="e#1357#1358#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SystemDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1776#1777#0" expanded="true" />
+            <element signature="e#1949#1950#0" expanded="true" />
+            <element signature="e#1992#1993#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="532">
           <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
@@ -493,6 +601,40 @@
           <caret line="77" column="45" lean-forward="false" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+        <state relative-caret-position="247">
+          <caret line="42" column="13" lean-forward="false" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
+            <element signature="e#1201#1202#0" expanded="true" />
+            <element signature="e#1337#1338#0" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1706#1707#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+            <element signature="e#1854#1855#0" expanded="true" />
+            <element signature="e#1886#1887#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/eviro/assessment/grad001/TshepangMaila/SavingsAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1205">
+          <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+>>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
           </folding>
         </state>
       </provider>
