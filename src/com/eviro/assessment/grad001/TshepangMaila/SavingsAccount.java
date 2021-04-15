@@ -47,7 +47,7 @@ public class SavingsAccount implements AccountService {
     public void withdraw(String accountNum, BigDecimal amountToWithdraw) {
 
         //ArryList Which Will Hold Objects Of CurrentAccount
-        ArrayList<SavingsAccount> accounts = SystemDB.savingsAccountData();
+        ArrayList<SavingsAccount> accounts = SystemDB.getInstance().savingsAccountData();
 
         //Try and Catch Block To Handle The Account Not Found Error At Runtime
 

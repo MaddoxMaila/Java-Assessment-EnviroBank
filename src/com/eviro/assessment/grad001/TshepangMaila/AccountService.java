@@ -14,8 +14,8 @@ public interface AccountService {
 
     /**
      * @param accountNum : Account Number Associated With A User
-     * @param amountToWitdraw : Amount Of Money To Be Withdrawn By User
+     * @param amountToWithdraw : Amount Of Money To Be Withdrawn By User
      *
      * */
-    public void withdraw(String accountNum, BigDecimal amountToWitdraw);
+    public void withdraw(String accountNum, BigDecimal amountToWithdraw);
 }
