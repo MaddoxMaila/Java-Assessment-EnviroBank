@@ -50,7 +50,7 @@ public class SavingsAccount implements AccountService {
      * */
     @Override
     public String getAccountNumber() {
-        return accountNum;
+        return this.accountNum;
     }
 
     /**
@@ -58,7 +58,7 @@ public class SavingsAccount implements AccountService {
      * */
     @Override
     public BigDecimal getBalance() {
-        return balance;
+        return this.balance;
     }
 
     /**
@@ -77,7 +77,7 @@ public class SavingsAccount implements AccountService {
             int AccIndex = SystemDB.getInstance().findSavingsAccount(accountNum);
 
             // If Account Found
-            if (AccIndex > 0){
+            if (AccIndex >= 0){
 
                 /**
                  * @see SystemDB
@@ -95,8 +95,10 @@ public class SavingsAccount implements AccountService {
 
                 }else if ((savingsAccount.getBalance().subtract(amountToWithdraw)).compareTo(new BigDecimal(1000)) >= 0){
 
-                    System.out.println("Withdraw Success Amount : R" + amountToWithdraw);
+                    System.out.println("\n\n************* | Withdrawal : R" + amountToWithdraw + " |*************");
                     savingsAccount.setBalance(savingsAccount.getBalance().subtract(amountToWithdraw));
+
+                    System.out.println("************* | Balance    : R" + savingsAccount.getBalance() + " |*************\n\b");
 
                 }
 

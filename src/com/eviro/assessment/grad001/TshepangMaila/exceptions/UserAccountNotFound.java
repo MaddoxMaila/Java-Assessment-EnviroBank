@@ -8,7 +8,7 @@ public class UserAccountNotFound extends AccountNotFoundException {
     }
 
     public UserAccountNotFound(String msg) {
-        super(msg);
+        super("\n********************\n*"+msg+"*\n********************\n");
 
     }
 

@@ -93,7 +93,7 @@ public class SystemDB{
         if(this.savingsAccounts.isEmpty()) return -1;
 
         /* Traverse Through The Accounts */
-        for(int i = 0; i < this.savingsAccounts.size(); i++){
+        for(int i = 0; i < this.savingsAccounts.size(); ++i){
 
             /* Compare Savings Account Numbers With That Supplied */
             if (this.savingsAccounts.get(i).getAccountNumber().equals(accountNum)){

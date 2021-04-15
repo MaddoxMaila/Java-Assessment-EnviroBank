@@ -3,7 +3,7 @@ package com.eviro.assessment.grad001.TshepangMaila.exceptions;
 public class WithdrawAmountExceedingAccount  extends Exception{
 
     public WithdrawAmountExceedingAccount(String message) {
-        super(message);
+        super("******** - " + message + " - ********");
     }
 
     @Override
