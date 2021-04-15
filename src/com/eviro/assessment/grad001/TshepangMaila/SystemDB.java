@@ -3,6 +3,14 @@ package com.eviro.assessment.grad001.TshepangMaila;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
+/**
+ * AccountService Interface includes one method to be implemented By
+ * CurrentAccount & SavingsAccount classes
+ * @author Tshepang Maddox Maila
+ * @since 15 April 2021
+ *
+ * */
+
 
 public class SystemDB{
 
