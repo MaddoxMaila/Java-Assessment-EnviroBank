@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class SystemDB{
 
     private static SystemDB mInstance;
-    private ArrayList<CurrentAccount> data;
+    private ArrayList<CurrentAccount> currentAccounts;
     private ArrayList<SavingsAccount> savingsAccounts;
 
     /**
@@ -17,10 +17,10 @@ public class SystemDB{
     private SystemDB(){
 
         /* Initialize Dummy Current Accounts */
-        this.data = new ArrayList<>();
-        this.data.add(new CurrentAccount(103,"3",new BigDecimal(1000),
+        this.currentAccounts = new ArrayList<>();
+        this.currentAccounts.add(new CurrentAccount(103,"3",new BigDecimal(1000),
                 new BigDecimal(10000)));
-        this.data.add(new CurrentAccount(104,"4",new BigDecimal(-5000),
+        this.currentAccounts.add(new CurrentAccount(104,"4",new BigDecimal(-5000),
                 new BigDecimal(20000)));
 
         /* Initialize Dummy Saving Accounts */
@@ -52,22 +52,21 @@ public class SystemDB{
     }
 
     /**
-     * @return ArrayList<CurrentAccount> data
+     * @return ArrayList<CurrentAccount> currentAccounts
      * Holds All CurrentAccounts In The Database
      * */
     public ArrayList<CurrentAccount> currentAccountData(){
-        return this.data;
+        return this.currentAccounts;
     }
 
     /**
-     * @return ArrayList<CurrentAccount> data
+     * @return ArrayList<CurrentAccount> currentAccounts
      * Holds All SavingsAccounts In The Database
      * */
     public ArrayList<SavingsAccount> savingsAccountData(){
         return this.savingsAccounts;
     }
 
-<<<<<<< HEAD
     /**
      * @param index of SavingsAccount To Be Returned
      * @return SavingsAccount
@@ -94,7 +93,7 @@ public class SystemDB{
         if(this.savingsAccounts.isEmpty()) return -1;
 
         /* Traverse Through The Accounts */
-        for(int i = 0; i < this.savingsAccounts.size(); ++i){
+        for(int i = 0; i < this.savingsAccounts.size(); i++){
 
             /* Compare Savings Account Numbers With That Supplied */
             if (this.savingsAccounts.get(i).getAccountNumber().equals(accountNum)){
@@ -139,6 +138,4 @@ public class SystemDB{
 
     }
 
-=======
->>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
 }

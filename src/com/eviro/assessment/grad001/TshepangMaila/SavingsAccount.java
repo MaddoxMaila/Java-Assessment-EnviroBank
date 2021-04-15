@@ -29,95 +29,88 @@ public class SavingsAccount implements AccountService {
     public SavingsAccount(){};
 
 
+    /**
+     * @see AccountService
+     * */
     @Override
     public int getId() {
         return id;
     }
 
+    /**
+     * @see AccountService
+     * */
     @Override
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
+    /**
+     * @see AccountService
+     * */
     @Override
     public String getAccountNumber() {
-        return this.accountNum;
+        return accountNum;
     }
 
+    /**
+     * @see AccountService
+     * */
     @Override
     public BigDecimal getBalance() {
-        return this.balance;
+        return balance;
     }
 
-
-    //Withdraw method
-
+    /**
+     * @see AccountService
+     * */
     @Override
     public void withdraw(String accountNum, BigDecimal amountToWithdraw) {
-
-        //ArryList Which Will Hold Objects Of CurrentAccount
-        ArrayList<SavingsAccount> accounts = SystemDB.getInstance().savingsAccountData();
 
         //Try and Catch Block To Handle The Account Not Found Error At Runtime
 
         try {
 
-            //Boolen variable to check if the account number is found the objects of array
-            boolean accFound = false;
-            //Index to used to access the current account in set of CurrentAccount Objects(ArrayList)
-            int accIndex = -1;
+            /**
+             * @see SystemDB
+             * */
+            int AccIndex = SystemDB.getInstance().findSavingsAccount(accountNum);
 
-            //For loop to traverse
-            for (int i = 0; i < accounts.size(); i++){
-
-                //if account number found
-                if (accounts.get(i).getAccountNumber().equals(accountNum)){
-
-                    accFound = true;
-                    accIndex = i;
-                    break;
-
-                }
-                //if reached end of loop and account not found
-                if (i == accounts.size() - 1 && !accFound){
-
-//                    Object accountNotFoundException = new Exception("Account Not Found");
-//
-//                    throw (Throwable) accountNotFoundException;
-
-                    throw new UserAccountNotFound("Account Not Found");
-
-                }
-
-            }
-
-            //if account found
-            if (accFound){
-
-                SavingsAccount savingsAccount = accounts.get(accIndex);
-
-<<<<<<< HEAD
             // If Account Found
-            if (AccIndex >= 0){
+            if (AccIndex > 0){
 
+                /**
+                 * @see SystemDB
+                 * SavingsAccount Associated With This Account Number & Index Was Found
+                 * */
+                SavingsAccount savingsAccount = SystemDB.getInstance().getSavingsAccount(AccIndex);
+                
                 if ((savingsAccount.getBalance().subtract(amountToWithdraw)).compareTo(new BigDecimal(1000)) < 0){
-
-                    //System.out.println("You Cannot Withdraw The Requested Amount");
+                    
+                    /**
+                     * @see WithdrawAmountExceedingAccount
+                     * Throw Custom Created Exception
+                     * */
                     throw new WithdrawAmountExceedingAccount("You Cannot Withdraw The Requested Amount");
 
                 }else if ((savingsAccount.getBalance().subtract(amountToWithdraw)).compareTo(new BigDecimal(1000)) >= 0){
 
-                    System.out.println("\n\n************* | Withdrawal : R" + amountToWithdraw + " |*************");
+                    System.out.println("Withdraw Success Amount : R" + amountToWithdraw);
                     savingsAccount.setBalance(savingsAccount.getBalance().subtract(amountToWithdraw));
-
-                    System.out.println("************* | Balance    : R" + savingsAccount.getBalance() + " |*************\n\b");
 
                 }
 
+            }else{
+
+                /**
+                 * @see UserAccountNotFound
+                 * Throws Custom Exception For An Account Thats Not In The DB
+                 * */
+                throw new UserAccountNotFound("User Account Not Found : This Account Number Does Not Exist");
+
+
             }
-
-
-
+            
         } catch (Throwable throwable) {
 
             System.out.println(throwable.getMessage());

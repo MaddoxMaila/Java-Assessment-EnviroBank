@@ -19,10 +19,24 @@ public interface AccountService {
      * */
     public void withdraw(String accountNum, BigDecimal amountToWithdraw);
 
+    /**
+     * @param balance Sets The Balance In The Account
+     * */
     public void setBalance(BigDecimal balance);
 
+    /**
+     * @return id Returns The Technical ID
+     * */
     public int getId();
+
+    /**
+     * @return String accountNum: Returns The Account Number Associated With The Account
+     * */
     public String getAccountNumber();
+
+    /**
+     * @return BigDecimal balance : Returns Balance Of The Account
+     * */
     public BigDecimal getBalance();
 
 }
