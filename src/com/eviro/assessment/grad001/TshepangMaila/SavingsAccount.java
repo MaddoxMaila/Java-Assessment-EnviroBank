@@ -1,7 +1,12 @@
 package com.eviro.assessment.grad001.TshepangMaila;
 
+import com.eviro.assessment.grad001.TshepangMaila.exceptions.UserAccountNotFound;
+import com.eviro.assessment.grad001.TshepangMaila.exceptions.WithdrawAmountExceedingAccount;
+
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
+
 
 public class SavingsAccount implements AccountService {
 
@@ -71,7 +76,7 @@ public class SavingsAccount implements AccountService {
 //
 //                    throw (Throwable) accountNotFoundException;
 
-                    throw new AccNotFound("Account Not Found");
+                    throw new UserAccountNotFound("Account Not Found");
 
                 }
 
@@ -86,7 +91,7 @@ public class SavingsAccount implements AccountService {
                 if ((savingsAccount.getBalance().subtract(amountToWithdraw)).compareTo(new BigDecimal(1000)) < 0){
 
                     //System.out.println("You Cannot Withdraw The Requested Amount");
-                    throw new WithdrawAmountExceed("You Cannot Withdraw The Requested Amount");
+                    throw new WithdrawAmountExceedingAccount("You Cannot Withdraw The Requested Amount");
 
                 }else if ((savingsAccount.getBalance().subtract(amountToWithdraw)).compareTo(new BigDecimal(1000)) >= 0){
 

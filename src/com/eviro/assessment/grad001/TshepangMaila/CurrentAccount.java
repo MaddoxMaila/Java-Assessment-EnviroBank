@@ -1,5 +1,8 @@
 package com.eviro.assessment.grad001.TshepangMaila;
 
+import com.eviro.assessment.grad001.TshepangMaila.exceptions.UserAccountNotFound;
+import com.eviro.assessment.grad001.TshepangMaila.exceptions.WithdrawAmountExceedingAccount;
+
 import javax.security.auth.login.AccountNotFoundException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -75,9 +78,8 @@ public class CurrentAccount implements AccountService {
 
                     //Object accountNotFoundException = new Exception("Account Not Found");
 
-                    AccNotFound accNotFound = new AccNotFound("Account Not Found");
+                    throw new UserAccountNotFound("Account Not Found");
 
-                    throw  accNotFound;
 
                 }
 
@@ -95,9 +97,8 @@ public class CurrentAccount implements AccountService {
 
 //                    System.out.println("You have exceeded your balance and overdraft limit.");
 
-                    WithdrawAmountExceed withdrawAmountExceed = new WithdrawAmountExceed("You have exceeded your balance and overdraft limit.");
+                    throw  new WithdrawAmountExceedingAccount("You have exceeded your balance and overdraft limit.");
 
-                    throw withdrawAmountExceed;
 
                 }else if (amountToWithdraw.compareTo(overdraftLimit.add(currentAccount.getBalance())) < 0){ // limit not exceeded
 
