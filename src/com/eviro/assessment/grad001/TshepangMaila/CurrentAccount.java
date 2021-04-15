@@ -85,7 +85,7 @@ public class CurrentAccount implements AccountService {
             int AccIndex = SystemDB.getInstance().findCurrentAccount(accountNum);
 
             /* Check If Index Returned Is Positive */
-            if (AccIndex > 0){
+            if (AccIndex >= 0){
 
                 /**
                  * @see SystemDB
@@ -108,8 +108,9 @@ public class CurrentAccount implements AccountService {
 
                     // Limit Not Exceeded
 
-                    System.out.println("Withdrawal Success Of R" + amountToWithdraw);
+                    System.out.println("\n\n**************************************\n Withdrawal : R" + amountToWithdraw);
                     currentAccount.setBalance((overdraftLimit.add(currentAccount.getBalance()).subtract(amountToWithdraw)));
+                    System.out.println(" Balance : R" + currentAccount.getBalance() + "\n**************************************\n");
 
                 }
 
