@@ -66,6 +66,35 @@ public class CurrentAccount implements AccountService {
     }
 
     /**
+     * @param currentAccountsList List Of Current Accounts
+     * @param accountNum Account Number Of Any Account
+     * @return int i : Index Of Account Associated With The Account Number Supplied
+     * */
+    private int findAccount(ArrayList<CurrentAccount> currentAccountsList, String accountNum){
+
+        /* Self Explanatory! */
+        if(currentAccountsList.isEmpty()) return -1;
+
+        /* Traverse Through The Accounts */
+        for(int i = 0; i < currentAccountsList.size(); i++){
+
+            /* Compare Account Numbers With That Supplied */
+            if (currentAccountsList.get(i).getAccountNum().equals(accountNum)){
+                return  i; // Returns The Index Of Account
+            }
+
+            /* If Loop Reaches The End And Still No Account Is Found */
+            if(currentAccountsList.size() - 1 == i){
+                return -1;
+            }
+
+        }
+
+        return -1;
+
+    }
+
+    /**
      *  @see AccountService
      *  Implements Abstract Method withdraw From AccountService
      *  @param accountNum : Account Number Associated With A User
@@ -77,59 +106,45 @@ public class CurrentAccount implements AccountService {
         // ArryList Which Will Hold Objects Of CurrentAccount
         ArrayList<CurrentAccount> mCurrentAccounts = SystemDB.getInstance().currentAccountData();
 
-        //Try and Catch Block To Handle The Account Not Found Error At Runtime
-
         try {
 
-            //Boolen variable to check if the account number is found the objects of array
-            boolean accFound = false;
-            //Index to used to access the current account in set of CurrentAccount Objects(ArrayList)
-            int accIndex = -1;
+            /* Find The Account Associated With Account Number Supplied */
+            int AccIndex = this.findAccount(mCurrentAccounts, accountNum);
 
-            //For loop to traverse
-            for (int i = 0; i < mCurrentAccounts.size(); i++){
+            /* Check If Index Returned Is Positive */
+            if (AccIndex > 0){
 
-                //if account number found
-                if (mCurrentAccounts.get(i).getAccountNum().equals(accountNum)){
+                /* Account Associated With This Account Number Was Found */
 
-                    accFound = true;
-                    accIndex = i;
-                    break;
-
-                }
-                //if reached end of loop and account not found
-                if (i == mCurrentAccounts.size() - 1 && !accFound){
-
-                    //Object accountNotFoundException = new Exception("Account Not Found");
-
-                    throw new UserAccountNotFound("Account Not Found");
-
-
-                }
-
-            }
-
-            //if account found
-            if (accFound){
-
-                CurrentAccount currentAccount = mCurrentAccounts.get(accIndex);
+                CurrentAccount currentAccount = mCurrentAccounts.get(AccIndex);
 
                 BigDecimal overdraftLimit = currentAccount.getOverdraft();
 
-                //if limit exceeded
+                // If Limit Exceeded
                 if (amountToWithdraw.compareTo(overdraftLimit.add(currentAccount.getBalance())) >= 0){
 
-//                    System.out.println("You have exceeded your balance and overdraft limit.");
+                    /**
+                     * @see WithdrawAmountExceedingAccount
+                     * Throws Custom Exception For Withdrawals Exceeding Balance
+                     * */
+                    throw  new WithdrawAmountExceedingAccount("Withdrawal Exceeding : You Have Exceeded The Amount You Can Withdraw.");
 
-                    throw  new WithdrawAmountExceedingAccount("You have exceeded your balance and overdraft limit.");
+                }else if (amountToWithdraw.compareTo(overdraftLimit.add(currentAccount.getBalance())) < 0){
 
-
-                }else if (amountToWithdraw.compareTo(overdraftLimit.add(currentAccount.getBalance())) < 0){ // limit not exceeded
+                    // Limit Not Exceeded
 
                     System.out.println("Withdrawal Success Of R" + amountToWithdraw);
                     currentAccount.setBalance((overdraftLimit.add(currentAccount.getBalance()).subtract(amountToWithdraw)));
 
                 }
+
+            }else{
+
+                /**
+                 * @see UserAccountNotFound
+                 * Throws Custom Exception For An Account Thats Not In The DB
+                 * */
+                 throw new UserAccountNotFound("User Account Not Found : This Account Number Does Not Exist");
 
             }
 
