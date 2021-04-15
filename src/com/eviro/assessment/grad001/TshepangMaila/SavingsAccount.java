@@ -99,8 +99,6 @@ public class SavingsAccount implements AccountService {
 <<<<<<< HEAD
             // If Account Found
             if (AccIndex >= 0){
-=======
->>>>>>> parent of d5f366f... Reworked It A Lil Bit :v, Moved Some Methods To SystemDB Coz I Think Since They Work Closely With Accounts They Should Just Be In Part Of The DB Instead Of Being Separately ImplementedBy Savings & Current
 
                 if ((savingsAccount.getBalance().subtract(amountToWithdraw)).compareTo(new BigDecimal(1000)) < 0){
 
