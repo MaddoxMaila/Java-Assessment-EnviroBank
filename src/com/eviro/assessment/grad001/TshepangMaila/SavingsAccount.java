@@ -14,28 +14,37 @@ public class SavingsAccount implements AccountService {
     private String accountNum;
     private BigDecimal balance;
 
+    /**
+     * Constructor With @params ->
+     * @param id Technical ID Associated With A User
+     * @param accountNum Account Number Of User
+     * @param balance Money In The Account
+     * */
     public SavingsAccount(int id, String accountNum, BigDecimal balance) {
         this.id = id;
         this.accountNum = accountNum;
         this.balance = balance;
     }
 
-    //Non-default constructor used to call the with implemented interface method withdraw()
     public SavingsAccount(){};
 
-    //Mutators And Accessors Methods
+
+    @Override
     public int getId() {
         return id;
     }
 
+    @Override
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public String getAccountNum() {
+    @Override
+    public String getAccountNumber() {
         return accountNum;
     }
 
+    @Override
     public BigDecimal getBalance() {
         return balance;
     }
@@ -62,7 +71,7 @@ public class SavingsAccount implements AccountService {
             for (int i = 0; i < accounts.size(); i++){
 
                 //if account number found
-                if (accounts.get(i).getAccountNum().equals(accountNum)){
+                if (accounts.get(i).getAccountNumber().equals(accountNum)){
 
                     accFound = true;
                     accIndex = i;

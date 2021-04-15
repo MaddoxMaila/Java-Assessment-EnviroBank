@@ -40,6 +40,7 @@ public class CurrentAccount implements AccountService {
     /**
      * @param balance Sets The Balance In The Account
      * */
+    @Override
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
@@ -47,13 +48,15 @@ public class CurrentAccount implements AccountService {
     /**
      * @return String accountNum: Returns The Account Number Associated With The Account
      * */
-    public String getAccountNum() {
+    @Override
+    public String getAccountNumber() {
         return accountNum;
     }
 
     /**
      * @return BigDecimal balance : Returns Balance Of The Account
      * */
+    @Override
     public BigDecimal getBalance() {
         return balance;
     }
@@ -79,7 +82,7 @@ public class CurrentAccount implements AccountService {
         for(int i = 0; i < currentAccountsList.size(); i++){
 
             /* Compare Account Numbers With That Supplied */
-            if (currentAccountsList.get(i).getAccountNum().equals(accountNum)){
+            if (currentAccountsList.get(i).getAccountNumber().equals(accountNum)){
                 return  i; // Returns The Index Of Account
             }
 

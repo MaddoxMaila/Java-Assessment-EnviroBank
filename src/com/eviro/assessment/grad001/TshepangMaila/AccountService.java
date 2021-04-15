@@ -18,4 +18,11 @@ public interface AccountService {
      *
      * */
     public void withdraw(String accountNum, BigDecimal amountToWithdraw);
+
+    public void setBalance(BigDecimal balance);
+
+    public int getId();
+    public String getAccountNumber();
+    public BigDecimal getBalance();
+
 }
