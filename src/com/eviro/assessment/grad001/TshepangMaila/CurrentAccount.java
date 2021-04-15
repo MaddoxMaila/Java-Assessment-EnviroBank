@@ -3,7 +3,6 @@ package com.eviro.assessment.grad001.TshepangMaila;
 import com.eviro.assessment.grad001.TshepangMaila.exceptions.UserAccountNotFound;
 import com.eviro.assessment.grad001.TshepangMaila.exceptions.WithdrawAmountExceedingAccount;
 
-import javax.security.auth.login.AccountNotFoundException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
@@ -31,14 +30,14 @@ public class CurrentAccount implements AccountService {
     public CurrentAccount(){};
 
     /**
-     * @return id Returns The Technical ID
+     * @see AccountService
      * */
     public int getId() {
         return id;
     }
 
     /**
-     * @param balance Sets The Balance In The Account
+     * @see AccountService
      * */
     @Override
     public void setBalance(BigDecimal balance) {
@@ -46,7 +45,7 @@ public class CurrentAccount implements AccountService {
     }
 
     /**
-     * @return String accountNum: Returns The Account Number Associated With The Account
+     * @see AccountService
      * */
     @Override
     public String getAccountNumber() {
@@ -54,7 +53,7 @@ public class CurrentAccount implements AccountService {
     }
 
     /**
-     * @return BigDecimal balance : Returns Balance Of The Account
+     * @see AccountService
      * */
     @Override
     public BigDecimal getBalance() {
@@ -69,35 +68,6 @@ public class CurrentAccount implements AccountService {
     }
 
     /**
-     * @param currentAccountsList List Of Current Accounts
-     * @param accountNum Account Number Of Any Account
-     * @return int i : Index Of Account Associated With The Account Number Supplied
-     * */
-    private int findAccount(ArrayList<CurrentAccount> currentAccountsList, String accountNum){
-
-        /* Self Explanatory! */
-        if(currentAccountsList.isEmpty()) return -1;
-
-        /* Traverse Through The Accounts */
-        for(int i = 0; i < currentAccountsList.size(); i++){
-
-            /* Compare Account Numbers With That Supplied */
-            if (currentAccountsList.get(i).getAccountNumber().equals(accountNum)){
-                return  i; // Returns The Index Of Account
-            }
-
-            /* If Loop Reaches The End And Still No Account Is Found */
-            if(currentAccountsList.size() - 1 == i){
-                return -1;
-            }
-
-        }
-
-        return -1;
-
-    }
-
-    /**
      *  @see AccountService
      *  Implements Abstract Method withdraw From AccountService
      *  @param accountNum : Account Number Associated With A User
@@ -106,20 +76,22 @@ public class CurrentAccount implements AccountService {
     @Override
     public void withdraw(String accountNum, BigDecimal amountToWithdraw) {
 
-        // ArryList Which Will Hold Objects Of CurrentAccount
-        ArrayList<CurrentAccount> mCurrentAccounts = SystemDB.getInstance().currentAccountData();
-
         try {
 
-            /* Find The Account Associated With Account Number Supplied */
-            int AccIndex = this.findAccount(mCurrentAccounts, accountNum);
+            /**
+             * @see SystemDB
+             * Find The Current Account Associated With Account Number Supplied
+             * */
+            int AccIndex = SystemDB.getInstance().findCurrentAccount(accountNum);
 
             /* Check If Index Returned Is Positive */
             if (AccIndex > 0){
 
-                /* Account Associated With This Account Number Was Found */
-
-                CurrentAccount currentAccount = mCurrentAccounts.get(AccIndex);
+                /**
+                 * @see SystemDB
+                 * CurrentAccount Associated With This Account & Index Number Was Found
+                 * */
+                CurrentAccount currentAccount = SystemDB.getInstance().getCurrentAccount(AccIndex);
 
                 BigDecimal overdraftLimit = currentAccount.getOverdraft();
 

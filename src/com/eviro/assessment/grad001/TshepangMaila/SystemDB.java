@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class SystemDB{
 
     private static SystemDB mInstance;
-    private ArrayList<CurrentAccount> data;
+    private ArrayList<CurrentAccount> currentAccounts;
     private ArrayList<SavingsAccount> savingsAccounts;
 
     /**
@@ -17,10 +17,10 @@ public class SystemDB{
     private SystemDB(){
 
         /* Initialize Dummy Current Accounts */
-        this.data = new ArrayList<>();
-        this.data.add(new CurrentAccount(103,"3",new BigDecimal(1000),
+        this.currentAccounts = new ArrayList<>();
+        this.currentAccounts.add(new CurrentAccount(103,"3",new BigDecimal(1000),
                 new BigDecimal(10000)));
-        this.data.add(new CurrentAccount(104,"4",new BigDecimal(-5000),
+        this.currentAccounts.add(new CurrentAccount(104,"4",new BigDecimal(-5000),
                 new BigDecimal(20000)));
 
         /* Initialize Dummy Saving Accounts */
@@ -52,19 +52,90 @@ public class SystemDB{
     }
 
     /**
-     * @return ArrayList<CurrentAccount> data
+     * @return ArrayList<CurrentAccount> currentAccounts
      * Holds All CurrentAccounts In The Database
      * */
     public ArrayList<CurrentAccount> currentAccountData(){
-        return this.data;
+        return this.currentAccounts;
     }
 
     /**
-     * @return ArrayList<CurrentAccount> data
+     * @return ArrayList<CurrentAccount> currentAccounts
      * Holds All SavingsAccounts In The Database
      * */
     public ArrayList<SavingsAccount> savingsAccountData(){
         return this.savingsAccounts;
+    }
+
+    /**
+     * @param index of SavingsAccount To Be Returned
+     * @return SavingsAccount
+     * */
+    public SavingsAccount getSavingsAccount(int index){
+        return this.savingsAccounts.get(index);
+    }
+
+    /**
+     * @param index of CurrentAccount To Be Returned
+     * @return CurrentAccount
+     * */
+    public CurrentAccount getCurrentAccount(int index){
+        return this.currentAccounts.get(index);
+    }
+
+    /**
+     * @param accountNum Account Number Of Any Account
+     * @return int i : Index Of Savings Account Associated With The Account Number Supplied
+     * */
+    public int findSavingsAccount(String accountNum){
+
+        /* Self Explanatory! */
+        if(this.savingsAccounts.isEmpty()) return -1;
+
+        /* Traverse Through The Accounts */
+        for(int i = 0; i < this.savingsAccounts.size(); i++){
+
+            /* Compare Savings Account Numbers With That Supplied */
+            if (this.savingsAccounts.get(i).getAccountNumber().equals(accountNum)){
+                return  i; // Returns The Index Of Account
+            }
+
+            /* If Loop Reaches The End And Still No Account Is Found */
+            if(this.savingsAccounts.size() - 1 == i){
+                return -1;
+            }
+
+        }
+
+        return -1;
+
+    }
+    /**
+     * @param accountNum Account Number Of Any Account
+     * @return int i : Index Of Account Associated With The Account Number Supplied
+     * */
+    public int findCurrentAccount(String accountNum){
+
+        /* Self Explanatory! */
+        if(this.currentAccounts.isEmpty()) return -1;
+
+        /* Traverse Through The Accounts */
+        for(int i = 0; i < this.currentAccounts.size(); i++){
+
+            /* Compare Account Numbers With That Supplied */
+            if (this.currentAccounts.get(i).getAccountNumber().equals(accountNum)){
+                return  i; // Returns The Index Of Account
+            }
+
+            /* If Loop Reaches The End And Still No Account Is Found */
+            if(this.currentAccounts.size() - 1 == i){
+                return -1;
+            }
+
+        }
+
+        return -1;
+
     }
 
 }
