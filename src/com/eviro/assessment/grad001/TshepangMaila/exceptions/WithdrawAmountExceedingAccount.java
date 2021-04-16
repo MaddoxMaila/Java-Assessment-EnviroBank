@@ -1,8 +1,6 @@
 package com.eviro.assessment.grad001.TshepangMaila.exceptions;
 
 /**
- * AccountService Interface includes one method to be implemented By
- * CurrentAccount & SavingsAccount classes
  * @author Tshepang Maddox Maila
  * @since 15 April 2021
  *

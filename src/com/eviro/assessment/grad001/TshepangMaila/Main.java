@@ -5,8 +5,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * AccountService Interface includes one method to be implemented By
- * CurrentAccount & SavingsAccount classes
  * @author Tshepang Maddox Maila
  * @since 15 April 2021
  *

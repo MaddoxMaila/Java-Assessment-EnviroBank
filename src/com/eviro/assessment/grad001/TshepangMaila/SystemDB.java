@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
- * AccountService Interface includes one method to be implemented By
- * CurrentAccount & SavingsAccount classes
  * @author Tshepang Maddox Maila
  * @since 15 April 2021
  *
@@ -24,14 +22,29 @@ public class SystemDB{
      * */
     private SystemDB(){
 
-        /* Initialize Dummy Current Accounts */
+        this.currentDummyData();
+        this.savingsDummyData();
+        
+    }
+
+    /**
+     * Just used to Initialize the Testing data into the DB
+     * */
+    private void currentDummyData(){
+
         this.currentAccounts = new ArrayList<>();
         this.currentAccounts.add(new CurrentAccount(103,"3",new BigDecimal(1000),
                 new BigDecimal(10000)));
         this.currentAccounts.add(new CurrentAccount(104,"4",new BigDecimal(-5000),
                 new BigDecimal(20000)));
 
-        /* Initialize Dummy Saving Accounts */
+    }
+
+    /**
+     * Just used to Initialize the Testing data into the DB
+     * */
+    private void savingsDummyData(){
+
         this.savingsAccounts = new ArrayList<>();
         this.savingsAccounts.add(new SavingsAccount(101,"1",new BigDecimal(2000)));
         this.savingsAccounts.add(new SavingsAccount(102,"2",new BigDecimal(5000)));
